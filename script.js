@@ -88,14 +88,16 @@ menuBtn.addEventListener("click", () => {
 //Changing the background color
 
 const color = document.querySelectorAll(".color");
-
-
-color.forEach(color => color.addEventListener("click", () => {
-    
-    document.querySelector("body").style.backgroundColor = color.dataset.color;
-
+color.forEach(color => color.addEventListener("click", ({target}) => {
+ localStorage.setItem("color", target.dataset.color);
+ changeBgColor(target.dataset.color)
 }));
 
+window.addEventListener("DOMContentLoaded", () => changeBgColor(localStorage.getItem('color')))
+
+function changeBgColor(color) {
+   if (color) document.querySelector("body").style.backgroundColor = color
+}
 
 //App info
 const show = document.querySelector(".dropdown-link");
