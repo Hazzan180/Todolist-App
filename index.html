@@ -1,0 +1,116 @@
+<!--Created By Hazzan-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,100;1,200;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <section id="container">
+        <div class="app-box">
+       <header class="header">
+
+        <div class="text">
+            <h1>My Day</h1>
+            <p class="date"></p>
+        </div>
+
+        <!--dropdown-->
+        <div class="dropdown-warpper">
+            <button class="menu-btn">
+                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+            </button>
+
+            <div class="dropdown-container ">
+                <ul class="me">
+                   
+                        <p class="p">Theme</p>
+                        <div class="theme">
+                            <button data-color ="slateblue" id="c1" class="color"></button>
+                            <button data-color ="skyblue" id="c2" class="color"></button>
+                            <button data-color ="sandybrown" id="c3" class="color"></button>
+                            <button data-color ="plum" id="c4" class="color"></button>
+                            <button data-color ="peachpuff" id="c5" class="color"></button>
+                            <button data-color ="palevioletred" id="c6" class="color"></button>
+                            <button data-color ="palegreen" id="c7" class="color"></button>
+                            <button data-color ="lightslategray" id="c8" class="color"></button>
+                        </div>
+                   
+    
+                    
+                        <button class="dropdown-link">
+                            <i class="fa fa-info-circle"></i>
+                            <span>App info</span>
+                        </button>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <!--app info-->
+        <div class="app-info">
+            <div class="modal">
+                <h2 class="model-title">App info</h2>
+                <ul class="model-list">
+
+                    <li class="model-item">
+                        <strong class="strong">Version:</strong>
+                        <span class="span">1.0</span>
+                    </li>
+
+                    <li class="model-item">
+                        <strong class="strong">Publish:</strong>
+                        <span class="span">sep 22 2022</span>
+                    </li>
+
+                    <li class="model-item">
+                        <strong class="strong">Latest Update:</strong>
+                        <span class="span">sep 22 2022</span>
+                    </li>
+
+                    <li class="model-item">
+                        <strong class="strong">Created By:</strong>
+                        <span class="span"><a href="https://twitter.com/home">HAZZAN TECH</a></span>
+                    </li>
+
+                </ul>
+                <button class="model-btn">OK</button>
+            </div>
+        </div>
+
+       </header>
+
+       <div class="title-wrapper">
+        <div class="wrapper">
+          <div class="fixed">
+            <div class="task-input">
+              <i class="fa fa-align-left" id="img"></i>
+              <input type="text" placeholder="Add a new task and press Enter">
+            </div>
+            <div class="control">
+              <div class="filters">
+                <span id="all" class="active">All</span>
+                <span id="pending">Pending</span>
+                <span id="completed">Completed</span>
+              </div>
+              <button class="clear-btn">clear All</button>
+            </div>
+          </div>
+            <ul class="task-box"></ul>
+        </div>    
+       </div>
+    
+
+    </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+<!--Created By Hazzan-->

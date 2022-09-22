@@ -1,0 +1,451 @@
+/* Created By Hazzan */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+*
+{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+h1, h2
+{
+    font-weight: 700;
+    user-select: none;
+}
+p, span
+{
+    user-select: none;
+}
+h1
+{
+    font-size: 2.6rem;
+}
+h2
+{
+    font-size: 2.2rem;
+}
+#c1
+{
+    background-color: slateblue;
+}
+#c2
+{
+    background-color: skyblue;
+}
+#c3
+{
+    background-color: sandybrown;
+}
+#c4
+{
+    background-color: plum;
+}
+#c5
+{
+    background-color: peachpuff;
+}
+#c6
+{
+    background-color: palevioletred;
+}
+#c7
+{
+    background-color: palegreen;
+}
+#c8
+{
+    background-color: lightslategray;
+}
+body
+{
+    position: relative;
+    background: rgb(94, 94, 206);
+    width: 100%;
+    height: 100vh;
+}
+::-webkit-scrollbar
+{
+    width: 0.5rem;
+    background-color: #fff;
+}
+::-webkit-scrollbar-thumb
+{
+    border-radius: 0.5rem;
+    background-color: #0000ff;
+}
+/* header */
+.app-box
+{
+    position: relative;
+    z-index: 1;
+}
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px;
+    align-items: flex-start;
+}
+.text h1
+{
+    color: #fff;
+}
+.text p
+{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 10px;
+}
+.menu-btn
+{
+    border: none;
+    background: transparent;   
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+}
+.dropdown-link:hover
+{
+    color: #3c87ff;
+}
+.dropdown-warpper
+{
+    position: relative;
+}
+.dropdown-container
+{
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: absolute;
+    top:  calc(100% + 5px);
+    right: 0;
+    width: 200px;
+    overflow: hidden;
+    z-index: 3;
+    visibility: hidden;
+}
+.dropdown-container.active
+{
+    visibility: visible;
+}
+.dropdown-container .p
+{
+    font-size: 20px;
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+.theme button
+{
+    padding: 15px;
+    border: none;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.dropdown-link
+{
+    border: none;
+    display: flex;
+    width: 100%;
+    padding-top: 20px;
+    align-items: center;
+    gap: 15px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+
+/*app info */
+.app-info
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    display: flex;
+    align-items: center;
+    z-index: 4;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.app-info.active
+{
+    opacity: 1;
+    visibility: visible;
+}
+.modal
+{
+    background-color: #fff;
+    padding: 20px;
+    padding-block-start: 30px;
+    border-radius: 5px;
+    max-width: 400px;
+    width: 100%;
+    transform: scale(1.1);
+    transform-origin: bottom;
+    transition: 0.15s cubic-bezier(0.05, 0.65, 0.26, 1);
+}
+.app-info.active .modal
+{
+    transform: scale(1);
+    transition-duration: 0.4s;
+}
+.model-list
+{
+    margin-block: 10px 30px;
+}
+.model-item
+{
+    font-size: 1.2rem;
+}
+.model-item:not(:last-child)
+{
+    margin-block-end: 5px;
+}
+.model-item > * 
+{
+    display: inline-block;
+}
+.model-item .span a
+{
+    color: #0000ff;
+    text-decoration: none;
+}
+.model-item .span a:hover
+{
+    color:slateblue ;
+}
+.model-btn
+{
+    width: 100%;
+    min-height: 30px;
+    font-size: 1.4rem;
+    background-color: hsla(0, 0%, 100%);
+    color: #000;
+    border-radius: 4px;
+    outline: 1px solid hsla(228, 17%, 94%);
+    box-shadow:  0 1.5px 1px hsla(0, 0%, 0%, 0.25);
+}
+.model-btn:hover
+{
+    background-color: hsla(0, 0%, 90%);
+}
+/* middel */
+.fixed
+{
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    background: #fff;
+    z-index: 2;
+}
+.title-wrapper
+{
+    margin-top: -25%;
+}
+.wrapper
+{
+    max-width: 100%;
+    margin: 135px auto;
+    border-radius: 7px;
+    padding: 28px 0;
+}
+.task-input
+{
+    height: 52px;
+    padding: 0px 25px;
+    position: relative;
+}
+.task-input #img
+{
+    position: absolute;
+    top: 50%;
+    transform: translate(17px, -50%);
+}
+.task-input input
+{
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid #3c87ff;
+    padding: 0 20px 0 53px;
+}
+.task-input input::placeholder
+{
+    color: #bfbfbf;
+}
+.control, li
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.control
+{
+    padding: 18px 25px;
+}
+.filters span
+{
+    margin: 0 8px;
+    font-size: 17px;
+    color: #3c87ff;
+    cursor: pointer;
+}
+.filters span:first-child
+{
+    margin-left: 0;
+}
+.filters span.active
+{
+    color: #0000ff;
+}
+.control .clear-btn
+{
+    background: #3c87ff;
+    color: #fff;;
+    border-radius: 4px;
+    font-size: 15px;
+    padding: 7px 13px;
+    cursor: pointer;
+}
+.control .clear-btn:hover
+{
+    background: #0000ff;
+}
+.task-box
+{
+    margin: 20px 25px;
+}
+.task-box .task
+{
+    font-size: 17px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+}
+.task-box .task:last-child
+{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+    z-index: -1;
+}
+.task label
+{
+    display: flex;
+}
+.task label p.checked
+{
+    text-decoration: line-through;
+}
+.task label p
+{
+    
+    color: #fff;
+    font-size: 20px;
+}
+.task label input
+{
+    margin-top: 6px;
+    margin-right: 12px;
+}
+.task .settings
+{
+    cursor: pointer;
+    position: relative;
+}
+.settings #i
+{
+    color: #fff;
+}
+.settings .task-menu
+{
+    position: absolute;
+    padding: 5px 0;
+    background: #fff;
+    right: -5px;
+    top: 20px;
+    border-radius: 4px;
+    transform: scale(0);
+    transform-origin: top left;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+.settings:hover .task-menu
+{
+    transform: scale(1);
+}
+.task-menu li
+{
+    height: 25px;
+    font-size: 16px;
+    padding: 17px 15px;
+    margin-bottom: 2px;
+    justify-content: flex-start;
+}
+.task-menu li:hover
+{
+    background: #f5f5f5;
+}
+.task-menu li i
+{
+    padding-right: 8px;
+}
+.before
+{
+    color: #fff;
+    font-size: 20px;
+}
+
+
+
+
+@media (min-width:768px)
+{
+    #container
+    {
+        max-width: 650px;
+        width: 100%;
+        margin-inline: auto;
+        padding: 20px 0;
+    }
+    .fixed
+    {
+        border-radius: 5px;
+    }
+    .app-box
+    {
+        background-color: hsla(0, 0%, 100%, 0.1);
+        padding: 25px;
+        border-radius: 10px;
+        height: 90vh;
+        overflow-y: scroll;
+    }
+    .app-box::-webkit-scrollbar
+    {
+        width: 0.4rem;
+        background-color: transparent;
+    }
+    .app-box::-webkit-scrollbar-thumb
+    {
+        border-radius: 0.5rem;
+        background-color: #fff;
+    }   
+}
+
+
+
+
+
+/* Created By Hazzan */
